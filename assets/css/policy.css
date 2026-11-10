@@ -1,0 +1,190 @@
+/*-----------------------------------*\
+  #policy.css
+\*-----------------------------------*/
+
+/**
+ * Policy Pages Styling
+ */
+
+/* 
+   - POLICY HERO SECTION
+*/
+
+.policy-hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, var(--smoky-black-1) 0%, var(--eerie-black-1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.policy-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/shape-5.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.policy-hero-title {
+  color: var(--gold-crayola);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.policy-hero-text {
+  color: var(--quick-silver);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* 
+   - POLICY CONTENT SECTION
+*/
+
+.policy-content {
+  padding: var(--section-space) 0;
+  background: var(--eerie-black-1);
+}
+
+.policy-text {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.policy-intro {
+  font-family: var(--fontFamily-dm_sans);
+  font-size: var(--fontSize-body-2);
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-5);
+  margin-bottom: 30px;
+}
+
+.policy-section-title {
+  font-family: var(--fontFamily-forum);
+  font-size: calc(2rem + 1vw);
+  color: var(--gold-crayola);
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold-crayola);
+}
+
+.policy-subtitle {
+  font-family: var(--fontFamily-dm_sans);
+  font-size: var(--fontSize-title-2);
+  color: var(--black);
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: var(--weight-bold);
+}
+
+.policy-text p {
+  font-family: var(--fontFamily-dm_sans);
+  font-size: var(--fontSize-body-4);
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-5);
+  margin-bottom: 15px;
+}
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.policy-list li {
+  font-family: var(--fontFamily-dm_sans);
+  font-size: var(--fontSize-body-4);
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-5);
+  padding: 10px 0 10px 30px;
+  position: relative;
+}
+
+.policy-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--gold-crayola);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-box {
+  background: var(--smoky-black-2);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid var(--gold-crayola);
+  margin-top: 30px;
+}
+
+.contact-box p {
+  margin-bottom: 10px;
+}
+
+.contact-box a {
+  color: var(--gold-crayola);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-box a:hover {
+  color: #d4af37;
+  text-decoration: underline;
+}
+
+/* 
+   - RESPONSIVE DESIGN
+*/
+
+@media (max-width: 768px) {
+  .policy-hero {
+    padding: 100px 0 60px;
+  }
+
+  .policy-hero-title {
+    font-size: calc(2rem + 4vw);
+  }
+
+  .policy-section-title {
+    font-size: calc(1.5rem + 2vw);
+  }
+
+  .policy-text {
+    padding: 0 15px;
+  }
+
+  .contact-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-intro,
+  .policy-text p,
+  .policy-list li {
+    font-size: 1.4rem;
+  }
+
+  .policy-subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* 
+   - SMOOTH SCROLL
+*/
+
+html {
+  scroll-behavior: smooth;
+}

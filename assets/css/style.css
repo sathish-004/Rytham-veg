@@ -1,4 +1,4 @@
-/*-----------------------------------*\
+﻿/*-----------------------------------*\
   #index.css
 \*-----------------------------------*/
 
@@ -1079,6 +1079,34 @@ body.nav-active { overflow: hidden; }
   margin-block-end: 120px;
 }
 
+.about-img-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-inline-start: 50px;
+}
+
+.about-img-wrapper .w-100 {
+  display: block;
+  width: 100%;
+}
+
+.about-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  right: 0;
+  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.82) 0%, hsla(0, 0%, 0%, 0.4) 60%, transparent 100%);
+  color: hsla(0, 0%, 100%, 1);
+  font-family: var(--fontFamily-forum);
+  font-size: 1.8rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.05em;
+  padding: 30px 20px 14px;
+  text-align: center;
+  pointer-events: none;
+}
+
 .about-banner > .w-100 { padding-inline-start: 50px; }
 
 .about .abs-img { position: absolute; }
@@ -1096,6 +1124,16 @@ body.nav-active { overflow: hidden; }
   top: -65px;
   right: 0;
   overflow: hidden;
+  border-radius: 8px;
+  width: 160px;
+}
+
+.about .abs-img-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.25);
 }
 
 .about .abs-img-1::before {
@@ -1109,11 +1147,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .about .abs-img-2::before {
-  inset: 0;
-  background-image: url('../images/badge-2-bg.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: rotate360 15s linear infinite;
+  display: none;
 }
 
 
@@ -1163,11 +1197,17 @@ body.nav-active { overflow: hidden; }
 }
 
 .menu .section-subtitle {
-  color: hsl(38, 100%, 60%);
+  color: hsla(0, 0%, 100%, 1);
   text-align: center;
   font-style: italic;
   font-size: 1.5rem;
+  font-weight: var(--weight-bold);
   letter-spacing: var(--letterSpacing-3);
+  background: linear-gradient(135deg, hsl(38, 70%, 50%), hsl(30, 80%, 40%));
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 4px;
+  margin-block-end: 16px;
 }
 
 .menu .section-title {
